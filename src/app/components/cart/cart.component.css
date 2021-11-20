@@ -1,0 +1,29 @@
+h1{
+    margin: 50px auto ;
+    color: #343a40;
+    display: block;
+}
+table{
+    margin: auto;
+    font-size: 20px;
+    border-bottom: 5px solid #505050;
+    width: 100%;
+}
+tr{
+    border-bottom: 3px solid #b5b5b5;
+}
+td{
+    border-bottom: 3px solid #b5b5b5;
+}
+.btn{
+    margin: 3px;
+}
+p{
+    margin: 15px 10px;
+}
+input{
+    text-indent: 10px;
+    margin: 25px 15px;
+    width: 60px;
+}
+span{color: red;}

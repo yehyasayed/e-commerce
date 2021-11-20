@@ -1,0 +1,40 @@
+input{
+    width: 50%;
+    margin: 30px auto;
+}
+input[value]{
+    display: block;
+    width: 100px;
+    height: 60px;
+    font-size: 25px;
+    margin: 0px auto;
+}
+input[type="file"]{
+    margin: -9% 0 4%;
+}
+/*************************************************************/
+h1{
+    margin: 50px auto ;
+    color: #343a40;
+    display: block;
+    width: 100%;
+}
+table{
+    margin: auto;
+    font-size: 20px;
+    border-bottom: 5px solid #505050;
+    width: 100%;
+    margin-bottom: 50px;
+}
+tr{
+    border-bottom: 3px solid #b5b5b5;
+}
+td{
+    border-bottom: 3px solid #b5b5b5;
+}
+.btn{
+    margin: 3px;
+}
+p{
+    margin: 15px 10px;
+}

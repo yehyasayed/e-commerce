@@ -1,0 +1,37 @@
+<div class="container text-center" [@Show]="state">
+    <h1>Add New Good</h1>
+    <form #f="ngForm" (ngSubmit)="addNewGood(f)">
+        <input type="text" class="form-control" name="name" #name="ngModel" ngModel placeholder="Name" required>
+        <input type="number" class="form-control" name="price" #price="ngModel" ngModel placeholder="Price" required>
+        <input type="file" name="image" #image required>
+        <br>
+        <input type="submit" value="Add" class="btn btn-primary" [disabled]="f.invalid">
+
+    </form>
+</div>
+<div class="container" [@Show]="state">
+    <div class="row">
+        <h1 class="text-center">All products</h1>
+        <div class="col col-lg-12 col-md-12 col-xs-2">
+            <table class="text-center" border="5">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Options</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = " let Good of Goodss; index as i ">
+                        
+                        <td><p>{{ Good.name}}</p></td>
+                        <td><p>{{ Good.price | currency}}</p></td>
+                        <td>
+                            <button class="btn btn-danger" (click)="delet(i)">delet</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

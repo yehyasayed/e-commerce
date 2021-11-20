@@ -1,0 +1,26 @@
+<div class="body text-center" [@Show]="state">
+    <div class="container">
+        <h1 class=" text-center">Our Products</h1>
+        <div class="row">
+            <div class="col col-lg-3 col-md-6 col-sm-12" *ngFor="let good of Goods; index as i"> 
+                <div class="card" style="width: 18rem;">
+                    <img [src]="good.imgUrl" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">{{good.name | titlecase}}</h5>
+                      <p class="card-text">{{good.price | currency}}</p>
+                      <button class="btn btn-primary" (click)="addToCart(i)" *ngIf="add !== i" [disabled]="!isUser">Add To Cart</button>
+                    </div>
+                    <div *ngIf="add === i">
+                        <input type="number" class="form-control" placeholder="Number you need to buy" name="num" #num="ngModel" ngModel [disabled]="!isUser">
+                        <br>
+                        <button class="btn btn-primary by" (click)="buy(num.value)" [disabled]="!isUser">By</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="foot" class="text-center">
+            <h5>Copyright ©DoogG All rights reserved</h5>
+            <p>Designed by <span>Y7Y</span></p>
+    </div>
+</div>

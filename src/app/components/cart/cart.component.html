@@ -1,0 +1,34 @@
+<div class="container" [@Show]="state">
+    <div class="row">
+        <h1 class="text-center">All Purchases</h1>
+        <div class="col col-lg-12 col-md-12 col-xs-2">
+            <table class="text-center" border="5">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Amount</td>
+                        <td>Total</td>
+                        <td>Options</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = " let cart of carts; index as i ">
+                        
+                        <td><p>{{ cart.name}}</p></td>
+                        <td><p>{{ cart.price | currency}}</p></td>
+                        <td>
+                            <input type="number" placeholder="Amount" [(ngModel)]="cart.number" #total>                   
+                        </td>
+                        <td> <p> {{ cart.number * cart.price | currency}} </p></td>
+                        <td>
+                            <button class="btn btn-primary" (click)="save(i)" >Save</button>
+                            <button class="btn btn-danger" (click)="delet(i)" >delet</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1 class="text-center">Total Cost = <span> {{ total }}$ </span></h1>
+    </div>
+</div>

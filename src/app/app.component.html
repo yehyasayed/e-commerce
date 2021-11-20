@@ -1,0 +1,23 @@
+<div class="over" [@Showw]="state">
+    <div class="over-content" [@Showw]="state2">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </div>
+</div>
+<div class="nav">
+    <app-navbar></app-navbar>
+</div>
+<div>
+    <div class="contant" [@router]="myoutlet.activatedRouteData['index']">
+        <router-outlet #myoutlet="outlet"></router-outlet>
+    </div>
+</div>
+
+
+

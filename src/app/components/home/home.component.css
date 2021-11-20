@@ -1,0 +1,40 @@
+h1{
+    margin: 35px 0 30px;
+    color: #343a40;
+}
+.card-img, .card-img-top {
+    height: 400px;
+}
+.by{
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.col{
+    margin: 20px 0;
+}
+#foot{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 0;
+    padding: 5px 0;
+    margin-top: 50px;
+}
+#foot h5{
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    margin: 30px 0 10px;
+    font-family: "Courier New";
+}
+#foot p{
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+}
+#foot p span{
+    color: #ce8e3c;
+    font-family: Garamond;
+}
